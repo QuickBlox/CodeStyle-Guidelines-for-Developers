@@ -1,9 +1,17 @@
-# QuickBlox Android Code Style
-Most of the following guidelines match [Java Code Conventions from Oracle (JCC)](http://www.oracle.com/technetwork/java/codeconventions-150003.pdf). Read it carefully first.
+﻿# QuickBlox Android Code Style
+
++ [Java-related part](https://github.com/QuickBlox/CodeStyle-Guidelines-for-Developers/blob/master/android/Java.md)
++ [Android-related part](https://github.com/QuickBlox/CodeStyle-Guidelines-for-Developers/blob/master/android/Android.md)
++ [Resources-related part](https://github.com/QuickBlox/CodeStyle-Guidelines-for-Developers/blob/master/android/Resources.md)
++ [Gradle-related part](https://github.com/QuickBlox/CodeStyle-Guidelines-for-Developers/blob/master/android/Gradle.md)
+
+Most of the guidelines match [Java Code Conventions from Oracle (JCC)](http://www.oracle.com/technetwork/java/codeconventions-150003.pdf). 
+Read it carefully first.
 
 These conventions *may* and, probably, *will* be complemented by new practices that were missed in previous editions.
 
-This is just a must-have set of recommendations and principles. For deeper explanations, details, examples and edge-cases, please take a look at JCC document.
+This is just a must-have set of recommendations and principles. 
+For deeper explanations, details, examples and edge-cases, please take a look at JCC document.
 
 
 ## Why do Code Conventions matter?
@@ -17,8 +25,8 @@ This is just a must-have set of recommendations and principles. For deeper expla
 - All naming should be done in a self-explanatory way and as short as it could be without conflicting with an explanatory part.
 - Numeric and literal constants should not be coded directly in the most cases, magic numbers aren't nice for code readability.
 - Avoid assigning several variables to the same value in a single statement, it's hard to read.
-- Copy-pasting is evil, if you need the same code in 2+ places than you have to find a way to reuse it, so the logics will be the same in all places.
-- Format your code before each commit. ```Ctrl + Alt + L``` for Windows or ```Cmd + Alt + L``` for OS X.
+- Copy-pasting is evil. EVIL. If you need the same (or really similar) code in 2+ places than you have to find a way to reuse it, so the logics will be the same in all places.
+- Tweak your IDE formatting settings and format your code before each commit. ```Ctrl + Alt + L``` for Windows or ```Cmd + Alt + L``` for OS X.
 - Keep it simple.
 
 ## Open to discussion

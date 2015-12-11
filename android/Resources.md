@@ -1,4 +1,15 @@
-## XML style rules
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Resource files naming](#resource-files-naming)
+- [Indentation](#indentation)
+- [Visual organization](#visual-organization)
+- [ID naming](#id-naming)
+- [XML attributes ordering](#xml-attributes-ordering)
+  - [XML files formating](#xml-files-formating)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ### Resource files naming
 - All resource file names are written in lowercase_underscore
@@ -9,7 +20,7 @@ For example, ```SplashActivity``` layout file should be named ```activity_splash
 ### Indentation
 Four spaces should be used for indentation everywhere, as well as in Java code.
 
-##### BAD
+**BAD**
 ```xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
@@ -17,7 +28,7 @@ Four spaces should be used for indentation everywhere, as well as in Java code.
               android:orientation="vertical">
 ```
 
-##### GOOD
+**GOOD**
 ```xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -34,7 +45,7 @@ Four spaces should be used for indentation everywhere, as well as in Java code.
 This helps to visualy separate closed elements and elements that can contain another elements.
 - When an XML element doesn't have any content, you *must* use self closing tag
 
-##### BAD
+**BAD**
 ```xml
 <!-- Don't do this -->
 <RelativeLayout
@@ -46,7 +57,7 @@ This helps to visualy separate closed elements and elements that can contain ano
 </RelativeLayout>
 ```
 
-##### GOOD
+**GOOD**
 ```xml
 <RelativeLayout
     android:id="@+id/container"
@@ -97,4 +108,4 @@ These settings can be achieved by doing:
 3. Set from -> Predefined Style -> Android
 ```
 
-Sometimes, after Android Studio restart, formatting settings are broken, need to do this again.
+Sometimes, after Android Studio restart, formatting settings are broken, you'll need to do this again.

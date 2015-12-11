@@ -1,9 +1,30 @@
-## Java related part
-### Indentation
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Indentation](#indentation)
+- [Braces](#braces)
+- [Line length](#line-length)
+- [Wrapping lines](#wrapping-lines)
+- [Commentaries](#commentaries)
+- [Variables declarations](#variables-declarations)
+  - [For class level declarations](#for-class-level-declarations)
+  - [For method level declarations](#for-method-level-declarations)
+  - [Classed and interfaces](#classed-and-interfaces)
+- [Statements](#statements)
+- [White Space](#white-space)
+  - [Blank lines](#blank-lines)
+  - [Blank spaces](#blank-spaces)
+- [Naming](#naming)
+- [Programming practices](#programming-practices)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+#### Indentation
 Four spaces should be used, tabs need to be avoided, since they can look and behave different on different development machines.
 
 
-### Braces
+#### Braces
 - There should *always* be a space between a statement and ```{``` brace.
 - Every code block (in ```if```, ```while```, ```for``` statements) *MUST* be enclosed by braces *even* if the block contains *only one statement*. 
 By not doing this, one relies on the code layout for correctness. Bugs are easily introduced this way.

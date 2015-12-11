@@ -1,4 +1,18 @@
-## Android related part
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Ordering](#ordering)
+  - [Class member ordering](#class-member-ordering)
+  - [Parameter ordering](#parameter-ordering)
+- [String constants, naming and values](#string-constants-naming-and-values)
+- [Arguments in Fragments and Activities](#arguments-in-fragments-and-activities)
+- [Method chain case](#method-chain-case)
+- [Long parameters case](#long-parameters-case)
+- [Java files naming](#java-files-naming)
+- [Logging](#logging)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ### Ordering
 #### Class member ordering

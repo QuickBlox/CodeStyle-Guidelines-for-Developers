@@ -26,7 +26,7 @@ For deeper explanations, details, examples and edge-cases, please take a look at
 - Numeric and literal constants should not be coded directly in the most cases, magic numbers aren't nice for code readability.
 - Avoid assigning several variables to the same value in a single statement, it's hard to read.
 - Copy-pasting is evil. EVIL. If you need the same (or really similar) code in 2+ places than you have to find a way to reuse it, so the logics will be the same in all places.
-- Tweak your IDE formatting settings and format your code before each commit. ```Ctrl + Alt + L``` for Windows or ```Cmd + Alt + L``` for OS X.
+- Tweak your IDE formatting settings and format your code before each commit. `Ctrl + Alt + L` for Windows or `Cmd + Alt + L` for OS X.
 - Keep it simple.
 
 ## Open to discussion

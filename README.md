@@ -1,2 +1,4 @@
-# CodeStyle-Guidelines-for-Developers
-CodeStyle Guidelines for Developers
+#Quickblox CodeStyle Guidelines for Developers
+
+[Android Team](./android/README.md)<br>
+[iOS Team](./iOS/IOSCODESTYLE)<br>

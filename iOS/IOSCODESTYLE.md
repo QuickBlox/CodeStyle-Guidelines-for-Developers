@@ -4,7 +4,7 @@
 ##1. Основные принципы
 ###1.1 Организация кода
 
-```objective-c
+```objc
 #pragma mark - Lifecycle
 
 - (instancetype)init {}
@@ -50,26 +50,26 @@
 
 **Хрошо:**
 
-```objective-c
+```objc
 - (void)insertObject:(id)object atIndex:(NSInteger)index;
 ```
 
 **Плохо:**
 
-```objective-c
+```objc
 - (void)insert:(id)o at:(NSInteger)i;
 ```
 Не использовать аббревиатуры какими бы не были длинными слова (есть некоторые сокращения, которыми можно пользоваться их список
 
 **Хрошо:**
 
-```objective-c
+```objc
 - (id)destinationSelection;
 ```
 
 **Плохо:**
 
-```objective-c
+```objc
 - (id)destSel;
 ```
 
@@ -77,34 +77,34 @@
 Методы, которые делают то же самое в разных классах должны иметь одинаковые названия.
 
 
-```objective-c
+```objc
 - (NSInteger)tag; //реализованно в NSView, NSCell, NSControll.
 ```
 ###1.4 Без само-ссылок
 
 **Хрошо:**
 
-```objective-c
+```objc
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, strong) NSArray *types;
 ```
 
 **Плохо:**
 
-```objective-c
+```objc
 @property (nonatomic, copy) NSString *nameString;
 @property (nonatomic, strong) NSString *typeArray;
 ```
 Если множество не **NSArray** или **NSSet**, то тогда указания типа имеет смысл:
 
-```objective-c
+```objc
 @property (nonatomic, strong) NSDictionary *keyedAccountNames;
 @property (nonatomic, strong) NSDictionary *messageDictionary;
 @property (nonatomic, strong) NSIndexSet *selectedMailboxesIndexSet;
 ```
 Исключением являются **UI** элементы:
  
-```objective-c
+```objc
 @property (nonatomic, strong) UIButton *sendMessageButton;
 @property (nonatomic, strong) UILabel *usernameLabel;
 @property (nonatomic, strong) UIImageView *avatarImageView;
@@ -114,7 +114,7 @@
 В именах не должно быть запятых, нижних подчеркиваний, каждое новое слово с большой буквы 
 **Примeр:**.
 
-```objective-c
+```objc
 @property (nonatomic, strong) UIButton *sendMessageButton;
 - (void)runTheWordsTogether;
 ```
@@ -124,7 +124,7 @@
 
 ***QBChatMessage.h***
 
-```objective-c
+```objc
 @interface QBChatMessage : NSObject
 ...
 @end
@@ -135,7 +135,7 @@
 
 ***ChatMessage.h***
 
-```objective-c
+```objc
 @interface ChatMessage : NSObject
 ...
 @end
@@ -147,7 +147,7 @@
 
 **Пример:**
 
-```objective-c
+```objc
 /**
  *	Message text
  */
@@ -184,56 +184,56 @@
 
 **Хорошо:**
 
-```objective-c
+```objc
 - (void)sendAction:(SEL)aSelector to:(id)anObject forAllCells:(BOOL)flag;
 ```
 **Плохо:**
 
-```objective-c
+```objc
 - (void)sendAction:(SEL)aSelector :(id)anObject :(BOOL)flag;
 ```
 Ставьте слово описывающее аргумент перед аргументом
 
 **Хорошо:**
 
-```objective-c
+```objc
 - (id)viewWithTag:(NSInteger)aTag;
 ```
 **Плохо:**
 
-```objective-c
+```objc
 - (id)taggedView:(int)aTag;
 ```
 Добавляйте новые ключевые слова в конце, при перегрузке метода в наследнике
 
 **NSView, UIView:**
 
-```objective-c
+```objc
 - (id)initWithFrame:(CGRect)frameRect;
 ```
 
 **NSMatrix субкласс от NSView:**
 
-```objective-c
+```objc
 - (id)initWithFrame:(NSRect)frameRect mode:(int)aMode cellClass:(Class)factoryId numberOfRows:(int)rowsHigh numberOfColumns:(int)colsWide;
 ```
 Не используйте “and” для связи между аргументами
 
 **Хорошо:**
 
-```objective-c
+```objc
 - (NSInteger)runModalForDirectory:(NSString *)path file:(NSString *)name;
 ```
 **Плохо:**
 
-```objective-c
+```objc
 - (NSInteger)runModalForDirectory:(NSString *)path andFile:(NSString *)name;
 ```
 Если метод реализует несколько действий, то используйте для связи “and”
 
 **Пример:**
 
-```objective-c
+```objc
 - (BOOL)openFile:(NSString *)fullPath withApplication:(NSString *)appName andDeactivate:(BOOL)flag;
 ```
 
@@ -241,13 +241,13 @@
 
 Если свойство - существительное, то формат такой:
 
-```objective-c
+```objc
 - (type)noun;
 - (void)setNoun:(type)aNoun;
 ```
 Если свойство - прилагательное, то формат такой:
 
-```objective-c
+```objc
 - (BOOL)isAllowed;
 - (void)setAllowed:(BOOL)flag;
 ```
@@ -256,18 +256,18 @@
 
 Первое слово в названии метода должно быть название класса отправителя:
 
-```objective-c
+```objc
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 ```
 Используйте "did" или "will" для методов, которые вызываются уведомить делегатов, что что-то произошло или вот-вот произойдет.
 
-```objective-c
+```objc
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView;
 ```
 Хотя вы можете использовать "did" или "will" для методов, которые вызываются чтобы обратиться к делегату что-то сделать от имени другого объекта, "should", является предпочтительным.
 
 
-```objective-c
+```objc
 - (BOOL)windowShouldClose:(id)sender;
 ```
 
@@ -275,7 +275,7 @@
 
 Для объектов, которые управляют коллекциями, методы должны соответствовать форме:
 
-```objective-c
+```objc
 - (void)addElement:(elementType)anObj;
 - (void)removeElement:(elementType)anObj;
 - (NSArray *)elements;
@@ -289,7 +289,7 @@
 
 **Пример:**
 
-```objective-c
+```objc
 - (id)objectAtIndex:(NSUInteger)index;
 - (void)setFont:(NSFont *)aFont;
 - (instance)initWithFrame:(NSRect)aRect;
@@ -300,13 +300,13 @@
 
 **Хорошо:**
 
-```objective-c
+```objc
 //name - @property
 self.object.name = @"Andrey";
 ```
 **Плохо:**
 
-```objective-c
+```objc
 //count - метод класса
 if (self.objects.count) {
 	...
@@ -317,18 +317,18 @@ if (self.objects.count) {
 
 **Хорошо:**
 
-```objective-c
+```objc
 NSInteger *count = [self.objects count];
 ```
 **Плохо:**
 
-```objective-c
+```objc
 NSString *collectionID = [((Collection *)[[[self gamesource] gameParts] lastObject]) collectionID];
 ```
 
 Пример объявления метода
 
-```objective-c
+```objc
 - (void)addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents
 ```
 
@@ -342,25 +342,25 @@ NSString *collectionID = [((Collection *)[[[self gamesource] gameParts] lastObje
 
 Большинство названий функций начинается с глагола:
 
-```objective-c
+```objc
 void NSHighlightRect(NSRect rect);
 void NSDeallocateObject(id object);
 ```
 Если функция возвращает свой ​​первый аргумент, то надо опустить глагол 
 
-```objective-c
+```objc
 unsigned int NSEventMaskFromType(NSEventType type)
 ```
 
 Если возвращаемое значение - ссылка, то надо использовать `Get`
 
-```objective-c
+```objc
 const char *NSGetSizeAndAlignment(const char *typePtr, unsigned int *sizep, unsigned int *alignp)
 ```
 
 Если значение возвращается `BOOL`, функция должна начинаться с флективных глаголов (*Флекти́вный - устройство языка синтетического типа, при котором доминирует словоизменение при помощи флексий — формантов, сочетающих сразу несколько значений.*):
 
-```objective-c
+```objc
 BOOL NSDecimalIsNotANumber(const NSDecimal *decimal)
 ```
 
@@ -372,7 +372,7 @@ BOOL NSDecimalIsNotANumber(const NSDecimal *decimal)
 
 **Пример:**
 
-```objective-c
+```objc
 // Key in userInfo. Value is a dictionary of NSExtensionItems and associated NSError instances.
 FOUNDATION_EXTERN NSString * const NSExtensionItemsAndErrorsKey;
 
@@ -395,7 +395,7 @@ FOUNDATION_EXTERN NSString *const NSExtensionHostDidBecomeActiveNotification;
 
 **Пример:**
 
-```objective-c
+```objc
 if ([user.login isEqualToString:login]) {
 
 	return user;         
@@ -410,7 +410,7 @@ else {
 
 **Плохо:**
 
-```objective-c
+```objc
 if ([user.login isEqualToString:login]) 
 	return user;  
 ```
@@ -436,7 +436,7 @@ Xib контроллера должен называться аналогичн�
 ##11. Константы
 Все константные значения необходимо выносить в consts:
 
-```objective-c
+```objc
 NSString *const kQMAuthorizationKey = @"WzrAY7vrGmbgFfP";
 NSString *const kQMAuthorizationSecret = @"xS2uerEveGHmEun";
 NSString *const kQMAccountKey = @"6Qyiz3pZfNsex1Enqnp7";
@@ -448,7 +448,7 @@ NSString *const kQMAccountKey = @"6Qyiz3pZfNsex1Enqnp7";
 
 **Хорошо:**
 
-```objective-c
+```objc
 NSString *title = @"New Title";
 NSNumber *fontSize = @42;
 NSArray *chars = @[@"a", @"b"];
@@ -458,7 +458,7 @@ NSDictionary *dictionary = @{@"one" : @"1", @"two" : @"2", @"three" : @"3"};
 ```
 **Плохо:**
 
-```objective-c
+```objc
 NSString *title = [NSString stringWithString:@"New Title"];
 NSNumber *fontSize = [NSNumber numberWithInt:42];
 NSArray *chars = [NSArray arrayWIthObjects:@"a", @"b",nil]
@@ -478,7 +478,7 @@ Warning в инлайн доку вставляется между `@param` и `
 
 **Пример:**
 
-``` objective-c
+``` objc
 /**
  *  Get image by attachment
  *

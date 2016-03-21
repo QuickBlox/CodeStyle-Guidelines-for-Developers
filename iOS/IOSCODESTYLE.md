@@ -319,7 +319,7 @@ if (self.objects.count) {
 **Хорошо:**
 
 ```objc
-NSInteger *count = [self.objects count];
+NSInteger count = [self.objects count];
 ```
 **Плохо:**
 

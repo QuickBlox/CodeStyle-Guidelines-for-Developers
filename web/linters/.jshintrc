@@ -1,0 +1,11 @@
+{
+    "maxerr": 50,
+    "camelcase": true,
+    "curly": true,
+    "eqeqeq": true,
+    "newcap": true,
+    "quotmark": "single",
+    "strict": false,
+    "asi": false,
+    "devel": true
+}

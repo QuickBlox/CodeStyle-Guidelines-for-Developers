@@ -10,6 +10,7 @@
     * When saving a reference to `this` use `that`;
     * If you do make accessor functions use `getVal()` and `setVal(val)`. If the property is a boolean, use `isVal()` or `hasVal()`;
 * Declare variables in the beginning of a function;
+* Always use `'use strict';`;
 * Always use semicolons;
 * Prefer single over double quotation marks;
 * Use [JsDoc](http://usejsdoc.org/about-getting-started.html) syntax for commenting code;

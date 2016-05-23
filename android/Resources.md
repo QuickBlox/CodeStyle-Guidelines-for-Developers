@@ -8,6 +8,7 @@
 - [Visual organization](#visual-organization)
 - [Stub data for layouts](#stub-data-for-layouts)
 - [ID naming](#id-naming)
+- [Resource naming](#resource-naming)
 - [Styles, Themes, Attributes and Dimens](#styles-themes-attributes-and-dimens)
 - [Layout inflation](#layout-inflation)
 - [Colors](#colors)

@@ -120,6 +120,48 @@ private TextView usernameTextView;
 private ImageView avatarImageView
 ```
 
+### Resource naming
+It's a good idea in resource naming follow a simple convention.
+What-Where-Description-Size
+Let's describe principles:
+- WHAT : Indicate what the resource actually represents, often a standard Android view class. e.g. MainActivity -> activity)
+- WHERE : Describe where it logically belongs in the app. Resources used in multiple screens use all, all others use the custom part of the Android view subclass they are in. e.g. MainActivity -> main, ArticleDetailFragment -> articledetail
+- DESCRIPTION : Differentiate multiple elements in one screen. e.g. title
+- SIZE (OPTIONAL) : Either a precise size or size bucket. Optionally used for drawables and dimensions. e.g. 24dp, small
+
+Examples:
+- String resources:
+```xml
+articledetail_title - title of ArticleDetailFragment
+feedback_explanation - feedback explanation in FeedbackFragment
+```
+- Dimensions resources:
+
+| Element           | Prefix               |
+| ----------------- | -------------------- |
+| `***width`        | `width in dp`        |
+| `height`          | `height in dp`       |
+| `size`            | `if width == height` |
+| `margin`          | `margin in dp`       |
+| `padding`         | `padding in dp`      |
+| `elevation`       | `elevation in dp`    |
+| `textsize`        | `size of text in sp` |
+
+ ```xml
+height_toolbar: height of all toolbars
+keyline_listtext: listitem text is aligned at this keyline
+textsize_medium: medium size of all text
+size_menu_icon: size of icons in menu
+height_menu_profileimage: height of profile image in menu
+```
+For long words can use abbreviation:
+For example: 
+```xml
+ <!--PointInformationFragment-->
+    <dimen name="pif_info_item_text_margin">35dp</dimen>
+    <dimen name="pif_info_item_layout_margin_left_right">20dp</dimen>
+```
+
 ### Styles, Themes, Attributes and Dimens
 - To be short: themes are used for global stuff like apps and activities, and styles are for local stuff, like widgets
 - Create MatchParent, WrapContent, MatchWidth, MatchHeight styles and inherit your styles from those. It helps to reduce attributes in layouts.
@@ -175,7 +217,6 @@ For example:
 7. android:layout_*, sorted alphabetically
 8. android:*, sorted alphabetically
 9. tools:
-
 
 ### XML files formating
 These settings can be achieved by doing:

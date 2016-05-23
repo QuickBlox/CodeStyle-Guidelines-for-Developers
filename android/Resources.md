@@ -123,7 +123,8 @@ private ImageView avatarImageView
 
 ### Resource naming
 It's a good idea in resource naming follow a simple convention.
-What-Where-Description-Size
+What-Where-Description-Size.
+<br>
 Let's describe principles:
 - WHAT : Indicate what the resource actually represents, often a standard Android view class. e.g. MainActivity -> activity)
 - WHERE : Describe where it logically belongs in the app. Resources used in multiple screens use all, all others use the custom part of the Android view subclass they are in. e.g. MainActivity -> main, ArticleDetailFragment -> articledetail

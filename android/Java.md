@@ -17,7 +17,10 @@
   - [Blank lines](#blank-lines)
   - [Blank spaces](#blank-spaces)
 - [Naming](#naming)
+- [Methods](#write Short Methods)
 - [Programming practices](#programming-practices)
+- [Exception handling](#exception handling)
+- [Best Practices](#best Practices)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
